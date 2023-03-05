@@ -35,7 +35,7 @@ def submit_form():
     sleep_reason = request.form.getlist('sleep_reason[]')
     hypertension = request.form['hypertension']
     diabetes = request.form['diabetes']
-    smoking = request.form['smoking']
+    smoking = request.form.get('smoking', '')
     alcohol = request.form['alcohol']
     nervous = request.form['nervous']
     depressed = request.form['depressed']
@@ -99,4 +99,4 @@ def submit_form():
         return "Error calling OpenAI API"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
