@@ -6,62 +6,62 @@
 </head>
 <body>
     <h1>Questionnaire Form</h1>
-    <form action="/submit" method="POST">
+    <form action="/submit" method="POST" onsubmit="showLoadingSpinner()">
         <label for="height">Height (in cm):</label>
-        <input type="number" id="height" name="height"><br>
+        <input type="number" id="height" name="height" required><br>
         
         <label for="weight">Weight (in kg):</label>
-        <input type="number" id="weight" name="weight"><br>
+        <input type="number" id="weight" name="weight" required><br>
     
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age"><br>
+        <input type="number" id="age" name="age" required><br>
     
         <label for="hippocampus">Hippocampus Volume (in mm3):</label>
-        <input type="number" id="hippocampus" name="hippocampus"><br>
+        <input type="number" id="hippocampus" name="hippocampus" required><br>
     
         <p>Gender:</p>
-        <label><input type="radio" name="gender" value="male">Male</label><br>
-        <label><input type="radio" name="gender" value="female">Female</label><br>
+        <label><input type="radio" name="gender" value="male" required>Male</label><br>
+        <label><input type="radio" name="gender" value="female" required>Female</label><br>
     
         <p>How much do you walk everyday?</p>
-        <label><input type="radio" name="walk" value="Less than 15 mins">Less than 15 mins</label><br>
-        <label><input type="radio" name="walk" value="Between 15-30 mins">Between 15-30 mins</label><br>
-        <label><input type="radio" name="walk" value="Between 30-45 mins">Between 30-45 mins</label><br>
-        <label><input type="radio" name="walk" value="Between 45-60 mins">Between 45-60 mins</label><br>
-        <label><input type="radio" name="walk" value="More than 60 mins">More than 60 mins</label><br>
+        <label><input type="radio" name="walk" value="Less than 15 mins" required>Less than 15 mins</label><br>
+        <label><input type="radio" name="walk" value="Between 15-30 mins" required>Between 15-30 mins</label><br>
+        <label><input type="radio" name="walk" value="Between 30-45 mins" required>Between 30-45 mins</label><br>
+        <label><input type="radio" name="walk" value="Between 45-60 mins" required>Between 45-60 mins</label><br>
+        <label><input type="radio" name="walk" value="More than 60 mins" required>More than 60 mins</label><br>
 
         <p>In a week how many times you exercise more than 30 minutes?</p>
-        <label><input type="radio" name="exercise" value="less than 1 day">Less than 1 day</label><br>
-        <label><input type="radio" name="exercise" value="1 day">1 day</label><br>
-        <label><input type="radio" name="exercise" value="2 days">2 days</label><br>
-        <label><input type="radio" name="exercise" value="3 days">3 days</label><br>
-        <label><input type="radio" name="exercise" value="4 days or more">4 days or more</label><br>
+        <label><input type="radio" name="exercise" value="less than 1 day" required>Less than 1 day</label><br>
+        <label><input type="radio" name="exercise" value="1 day" required>1 day</label><br>
+        <label><input type="radio" name="exercise" value="2 days" required>2 days</label><br>
+        <label><input type="radio" name="exercise" value="3 days" required>3 days</label><br>
+        <label><input type="radio" name="exercise" value="4 days or more" required>4 days or more</label><br>
 
         <p>Everyday how many portions of fruits and vegetables do you eat?</p>
-        <label><input type="radio" name="fruits_veggies" value="less than 1">Less than 1</label><br>
-        <label><input type="radio" name="fruits_veggies" value="2 portions">2 portions</label><br>
-        <label><input type="radio" name="fruits_veggies" value="3 portions">3 portions</label><br>
-        <label><input type="radio" name="fruits_veggies" value="4 portions">4 portions</label><br>
-        <label><input type="radio" name="fruits_veggies" value="5 or more portions">5 or more portions</label><br>
+        <label><input type="radio" name="fruits_veggies" value="less than 1" required>Less than 1</label><br>
+        <label><input type="radio" name="fruits_veggies" value="2 portions" required>2 portions</label><br>
+        <label><input type="radio" name="fruits_veggies" value="3 portions" required>3 portions</label><br>
+        <label><input type="radio" name="fruits_veggies" value="4 portions" required>4 portions</label><br>
+        <label><input type="radio" name="fruits_veggies" value="5 or more portions required">5 or more portions</label><br>
 
         <p>In a week, how much fish do you eat?</p>
         <label><input type="radio" name="fish" value="less than 1 portion per week">Less than 1 portion per week</label><br>
-        <label><input type="radio" name="fish" value="1 portion">1 portion</label><br>
-        <label><input type="radio" name="fish" value="2 portions">2 portions</label><br>
-        <label><input type="radio" name="fish" value="3 portions">3 portions</label><br>
-        <label><input type="radio" name="fish" value="4 portions">4 portions</label><br>
+        <label><input type="radio" name="fish" value="1 portion" required>1 portion</label><br>
+        <label><input type="radio" name="fish" value="2 portions" required>2 portions</label><br>
+        <label><input type="radio" name="fish" value="3 portions" required>3 portions</label><br>
+        <label><input type="radio" name="fish" value="4 portions" required>4 portions</label><br>
 
         <p>In the past month, how would you qualify your own sleep?</p>
-        <label><input type="radio" name="sleep" value="extremely good">Extremely good</label><br>
-        <label><input type="radio" name="sleep" value="normal">Normal</label><br>
-        <label><input type="radio" name="sleep" value="bad">Bad</label><br>
-        <label><input type="radio" name="sleep" value="very bad">Very bad</label><br>
+        <label><input type="radio" name="sleep" value="extremely good" required>Extremely good</label><br>
+        <label><input type="radio" name="sleep" value="normal" required>Normal</label><br>
+        <label><input type="radio" name="sleep" value="bad" required>Bad</label><br>
+        <label><input type="radio" name="sleep" value="very bad" required>Very bad</label><br>
         
         <p>Which of the following reasons apply to your sleep? Select all that apply. </p>
-        <label><input type="checkbox" name="sleep_reason[]" value="I snore louder than my speaking voice">I snore louder than my speaking voice</label><br>
-        <label><input type="checkbox" name="sleep_reason[]" value="fatigue and daytime sleepiness">Fatigue and daytime sleepiness</label><br>
-        <label><input type="checkbox" name="sleep_reason[]" value="Shortness of breath during sleep">Shortness of breath during sleep</label><br>
-        <label><input type="checkbox" name="sleep_reason[]" id="none-checkbox" value="none of the above">None of the above</label><br>
+        <label><input type="checkbox" name="sleep_reason[]" value="I snore louder than my speaking voice" >I snore louder than my speaking voice</label><br>
+        <label><input type="checkbox" name="sleep_reason[]" value="fatigue and daytime sleepiness" >Fatigue and daytime sleepiness</label><br>
+        <label><input type="checkbox" name="sleep_reason[]" value="Shortness of breath during sleep" >Shortness of breath during sleep</label><br>
+        <label><input type="checkbox" name="sleep_reason[]" id="none-checkbox" value="none of the above" >None of the above</label><br>
         <script>
         const noneCheckbox = document.getElementById("none-checkbox");
         const otherCheckboxes = document.querySelectorAll('input[name="sleep_reason[]"]:not(#none-checkbox)');
@@ -96,53 +96,64 @@
         </script>
         
         <p>Have you ever been told you have hypertension? Or are you on treatment for hypertension?</p>
-        <label><input type="radio" name="hypertension" value="yes">Yes</label><br>
-        <label><input type="radio" name="hypertension" value="no">No</label><br>
+        <label><input type="radio" name="hypertension" value="yes" required>Yes</label><br>
+        <label><input type="radio" name="hypertension" value="no" required>No</label><br>
 
         <p>Have you ever been told you have diabetes? Or are you on treatment for diabetes?</p>
-        <label><input type="radio" name="diabetes" value="yes">Yes</label><br>
-        <label><input type="radio" name="diabetes" value="no">No</label><br>
+        <label><input type="radio" name="diabetes" value="yes" required>Yes</label><br>
+        <label><input type="radio" name="diabetes" value="no" required>No</label><br>
 
         <p>Do you smoke?</p>
-        <label><input type="radio" name="smoking" value="yes">Yes</label><br>
-        <label><input type="radio" name="smoking" value="no">No</label><br>
+        <label><input type="radio" name="smoking" value="yes" required>Yes</label><br>
+        <label><input type="radio" name="smoking" value="no" required>No</label><br>
 
         <p>How much alcohol do you drink per day?</p>
-        <label><input type="radio" name="alcohol" value="don't drink at all">Don't drink at all</label><br>
-        <label><input type="radio" name="alcohol" value="less than half a cup">Less than half a cup</label><br>
-        <label><input type="radio" name="alcohol" value="between half and 1 cups">Between half and 1 cups</label><br>
-        <label><input type="radio" name="alcohol" value="between 1 and 2 cups">Between 1 and 2 cups</label><br>
-        <label><input type="radio" name="alcohol" value="2 or more cups">2 or more cups</label><br>
+        <label><input type="radio" name="alcohol" value="don't drink at all" required>Don't drink at all</label><br>
+        <label><input type="radio" name="alcohol" value="less than half a cup" required>Less than half a cup</label><br>
+        <label><input type="radio" name="alcohol" value="between half and 1 cups" required>Between half and 1 cups</label><br>
+        <label><input type="radio" name="alcohol" value="between 1 and 2 cups" required>Between 1 and 2 cups</label><br>
+        <label><input type="radio" name="alcohol" value="2 or more cups" required>2 or more cups</label><br>
 
         <p>In the past month, did you feel nervous?</p>
-        <label><input type="radio" name="nervous" value="Not at all">Not at all</label><br>
-        <label><input type="radio" name="nervous" value="Just a little">Just a little</label><br>
-        <label><input type="radio" name="nervous" value="Sometimes">Sometimes</label><br>
-        <label><input type="radio" name="nervous" value="Generally">Generally</label><br>
-        <label><input type="radio" name="nervous" value="Everytime">Everytime</label><br>
+        <label><input type="radio" name="nervous" value="Not at all" required>Not at all</label><br>
+        <label><input type="radio" name="nervous" value="Just a little" required>Just a little</label><br>
+        <label><input type="radio" name="nervous" value="Sometimes" required>Sometimes</label><br>
+        <label><input type="radio" name="nervous" value="Generally" required>Generally</label><br>
+        <label><input type="radio" name="nervous" value="Everytime" required>Everytime</label><br>
 
         <p>In the past month, did you feel depressed and like nothing could make you feel better?</p>
-        <label><input type="radio" name="depressed" value="Not at all">Not at all</label><br>
-        <label><input type="radio" name="depressed" value="Just a little">Just a little</label><br>
-        <label><input type="radio" name="depressed" value="Sometimes">Sometimes</label><br>
-        <label><input type="radio" name="depressed" value="Generally">Generally</label><br>
-        <label><input type="radio" name="depressed" value="Everytime">Everytime</label><br>
+        <label><input type="radio" name="depressed" value="Not at all" required>Not at all</label><br>
+        <label><input type="radio" name="depressed" value="Just a little" required>Just a little</label><br>
+        <label><input type="radio" name="depressed" value="Sometimes" required>Sometimes</label><br>
+        <label><input type="radio" name="depressed" value="Generally" required>Generally</label><br>
+        <label><input type="radio" name="depressed" value="Everytime" required>Everytime</label><br>
 
         <p>In the past month, did you feel that anything you did was foolish?</p>
-        <label><input type="radio" name="difficult" value="Not at all">Not at all</label><br>
-        <label><input type="radio" name="difficult" value="Just a little">Just a little</label><br>
-        <label><input type="radio" name="difficult" value="Sometimes">Sometimes</label><br>
-        <label><input type="radio" name="difficult" value="Generally">Generally</label><br>
-        <label><input type="radio" name="difficult" value="Everytime">Everytime</label><br>
+        <label><input type="radio" name="difficult" value="Not at all" required>Not at all</label><br>
+        <label><input type="radio" name="difficult" value="Just a little" required>Just a little</label><br>
+        <label><input type="radio" name="difficult" value="Sometimes" required>Sometimes</label><br>
+        <label><input type="radio" name="difficult" value="Generally" required>Generally</label><br>
+        <label><input type="radio" name="difficult" value="Everytime" required>Everytime</label><br>
 
         <p>In the past month, did you feel worthless?</p>
-        <label><input type="radio" name="worthless" value="Not at all">Not at all</label><br>
-        <label><input type="radio" name="worthless" value="Just a little">Just a little</label><br>
-        <label><input type="radio" name="worthless" value="Sometimes">Sometimes</label><br>
-        <label><input type="radio" name="worthless" value="Generally">Generally</label><br>
-        <label><input type="radio" name="worthless" value="Everytime">Everytime</label><br>
+        <label><input type="radio" name="worthless" value="Not at all" required>Not at all</label><br>
+        <label><input type="radio" name="worthless" value="Just a little" required>Just a little</label><br>
+        <label><input type="radio" name="worthless" value="Sometimes" required>Sometimes</label><br>
+        <label><input type="radio" name="worthless" value="Generally" required>Generally</label><br>
+        <label><input type="radio" name="worthless" value="Everytime" required>Everytime</label><br>
+
+        <!-- Add a div with a unique ID to show the loading spinner -->
+        <div id="loading-spinner" class="hidden">
+            <div class="spinner"></div>
+        </div>
 
         <input type="submit" value="Submit">
     </form>
+    <script>
+        function showLoadingSpinner() {
+            // Show the loading spinner when the form is submitted
+            document.getElementById("loading-spinner").classList.remove("hidden");
+        }
+    </script>
 </body>
 </html>

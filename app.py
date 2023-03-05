@@ -22,25 +22,26 @@ def index():
 def submit_form():
     print("form submitted")
     # Get the form data from the request
-    patient_height = request.form['height']
-    weight = request.form['weight']
-    age = request.form['age']
-    hippocampus = request.form['hippocampus']
-    gender = request.form['gender']
-    walk = request.form['walk']
-    exercise = request.form['exercise']
-    fruits_veggies = request.form['fruits_veggies']
-    fish = request.form['fish']
-    sleep = request.form['sleep']
+    patient_height = request.form.get('height', '')
+    weight = request.form.get('weight', '')
+    age = request.form.get('age', '')
+    hippocampus = request.form.get('hippocampus', '')
+    gender = request.form.get('gender', '')
+    walk = request.form.get('walk', '')
+    exercise = request.form.get('exercise', '')
+    fruits_veggies = request.form.get('fruits_veggies', '')
+    fish = request.form.get('fish', '')
+    sleep = request.form.get('sleep', '')
     sleep_reason = request.form.getlist('sleep_reason[]')
-    hypertension = request.form['hypertension']
-    diabetes = request.form['diabetes']
+    hypertension = request.form.get('hypertension', '')
+    diabetes = request.form.get('diabetes', '')
     smoking = request.form.get('smoking', '')
-    alcohol = request.form['alcohol']
-    nervous = request.form['nervous']
-    depressed = request.form['depressed']
-    difficult = request.form['difficult']
-    worthless = request.form['worthless']
+    alcohol = request.form.get('alcohol', '')
+    nervous = request.form.get('nervous', '')
+    depressed = request.form.get('depressed', '')
+    difficult = request.form.get('difficult', '')
+    worthless = request.form.get('worthless', '')
+    smoking = request.form.get('smoking', '')
 
 
     # Construct the mytext variable based on the form data
