@@ -45,24 +45,24 @@ def submit_form():
 
 
     # Construct the mytext variable based on the form data
-    mytext = f"Prepare some lifestyle advice for the prevention of dementia, for a person with the following characteristics: {patient_height}cm tall weights {weight}kg and is a {age}-year-old {gender}. This person hippocampus volume is {hippocampus} cubic mm. This person took the following lifestyle and medical history questionnaire and next to each question is the answer obtained. Your essay please separate it into Introduction, Exercise, Sleep, Diet, Communication, Alcohol, Hobbies, Mental Health and Conclusion sections."
+    mytext = f"Prepare some lifestyle advice for the prevention of dementia, for a person with the following characteristics: {patient_height}cm tall weights {weight}kg and is a {age}-year-old {gender}. This person hippocampus volume is {hippocampus} cubic mm. This person took the following lifestyle and medical history questionnaire and next to each question is the answer obtained. Your essay please separate it into Introduction, Exercise, Sleep, Diet, Communication, Alcohol, Hobbies, Mental Health and Conclusion sections. "
     mytext += f"\nPhysical Activity:\nHow much do you walk everyday? {walk}."
     mytext += f"\nIn a week how many times you exercise more than 30 minutes? {exercise}."
     mytext += f"\nDiet:\nEveryday how many portions of fruits and vegetables do you eat? {fruits_veggies}."
     mytext += f"\nIn a week, how much fish do you eat? {fish}."
     mytext += f"\nSleep:\nIn the past months, how would you qualify your own sleep? {sleep}."
     if sleep_reason:
-        mytext += "\nWhich of the following reasons apply to your sleep?"
+        mytext += "\nWhich of the following reasons apply to your sleep? Select all that apply."
         for reason in sleep_reason:
             mytext += f"\n- {reason}"
     mytext += f"\nMedical History:\nHave you ever been told you have hypertension? Or are you on treatment for hypertension? {hypertension}."
     mytext += f"\nHave you ever been told you have diabetes? Or are you on treatment for diabetes? {diabetes}."
     mytext += f"\nDo you smoke? {smoking}."
     mytext += f"\nHow much alcohol do you drink per day? {alcohol}."
-    mytext += f"\nMental Health:\nI would like to ask about the last 30 days. Did you feel nervous? {nervous}."
-    mytext += f"\nDid you feel depressed and like nothing could make you feel better? {depressed}."
-    mytext += f"\nWhat did you find difficult to do? {difficult}."
-    mytext += f"\nDid you feel worthless? {worthless}."
+    mytext += f"\nMental Health:\nIn the past month, did you feel nervous?{nervous}."
+    mytext += f"\nIn the past month, did you feel depressed and like nothing could make you feel better? {depressed}."
+    mytext += f"\nIn the past month, did you feel that anything you did was foolish?{difficult}."
+    mytext += f"\nIn the past month, did you feel worthless? {worthless}."
 
     print("mytext", mytext)
 
@@ -74,7 +74,7 @@ def submit_form():
         "model": "gpt-3.5-turbo",
         "messages": [{"role": "user", "content": mytext}],
         "temperature" : 1.0,
-        "top_p":1.0,
+        "top_p":0.7,
         "n" : 1,
         "stream": False,
         "presence_penalty":0,
