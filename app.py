@@ -72,7 +72,7 @@ def submit_form():
     # Call the OpenAI API
     URL = "https://api.openai.com/v1/chat/completions"
     payload = {
-        "model": "gpt-4",
+        "model": "gpt-4o",
         "messages": [{"role": "user", "content": mytext}],
         "temperature" : 1.0,
         "top_p":0.7,
@@ -83,7 +83,7 @@ def submit_form():
     }
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {openai.api_key}"
+        "Authorization": f"Bearer {openai_api_key}"
     }
     response = requests.post(URL, headers=headers, json=payload, stream=False)
     print("responseeeee", response)

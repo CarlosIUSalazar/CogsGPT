@@ -18,3 +18,4 @@ venv/
 lib/
 include/
 bin/
+.DS_Store
